@@ -1,11 +1,4 @@
-const REQUIRED_ORIGIN_PATTERN = 
-  /^((\*|([\w_-]{2,}))\.)*(([\w_-]{2,})\.)+(\w{2,})(\,((\*|([\w_-]{2,}))\.)*(([\w_-]{2,})\.)+(\w{2,}))*$/
-
-if (!process.env.ORIGINS.match(REQUIRED_ORIGIN_PATTERN)) {
-  throw new Error('process.env.ORIGINS MUST be comma separated list \
-    of origins that login can succeed on.')
-}
-const origins = process.env.ORIGINS.split(',')
+const origins = ["https://om-eressos-permaculture-web-1.onrender.com"];
 
 
 module.exports = (oauthProvider, message, content) => `
